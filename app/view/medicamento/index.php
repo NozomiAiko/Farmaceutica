@@ -30,13 +30,13 @@
             </nav>
     </div>
     <main>
-    <a href="index.php?controller=medicamento&action=create">Añadir Medicamento</a>
+    <a id="boton" href="enrutador.php?controller=medicamento&action=create">Añadir Medicamento</a>
     <h1>Medicamentos</h1>
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
+                <th>Codigo</th>
+                <th>Medicamento</th>
                 <th>Proveedor</th>
                 <th>Descripcion</th>
                 <th>Precio</th>  
@@ -50,10 +50,10 @@
                     <td><?php echo $medicamento['nombreMed']; ?></td>
                     <td><?php echo $medicamento['codProveedor']; ?></td>
                     <td><?php echo $medicamento['detalle']; ?></td>
-                    <td><?php echo $medicamento['precio']; ?></td>
+                    <td>Bs. <?php echo $medicamento['precio']; ?></td>
                     <td>
-                        <a href="index.php?controller=medicamento&action=edit&id=<?php echo $medicamento['idMedicamento']; ?>">Editar</a>
-                        <a href="index.php?controller=medicamento&action=delete&id=<?php echo $medicamento['idMedicamento']; ?>" onclick="return confirm('¿Estás seguro de eliminar este medicamento?');">Eliminar</a>    
+                        <a id="boton" href="enrutador.php?controller=medicamento&action=edit&id=<?php echo $medicamento['idMedicamento']; ?>">Editar</a>
+                        <a id="boton" href="enrutador.php?controller=medicamento&action=delete&id=<?php echo $medicamento['idMedicamento']; ?>" onclick="return confirm('¿Estás seguro de eliminar este medicamento?');">Eliminar</a>    
                 </td>
                 </tr>
             <?php endforeach; ?>

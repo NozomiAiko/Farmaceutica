@@ -30,17 +30,18 @@
             </nav>
     </div>
     <main>
-    <a href="index.php?controller=ventam&action=create">Añadir Detalle de Venta</a>
+    <a id="boton" href="enrutador.php?controller=ventam&action=create">Añadir Detalle de Venta</a>
     <h1>Ventas Principales </h1>
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Codigo</th>
                 <th>Fecha</th>
                 <th>Total</th>
                 <th>Cliente</th>
                 <th>Tipo de pago</th>
                 <th>Empleado</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -48,13 +49,13 @@
                 <tr>
                     <td><?php echo $ventam['idVentaM']; ?></td>
                     <td><?php echo $ventam['fecha']; ?></td>
-                    <td><?php echo $ventam['total']; ?></td>
+                    <td>Bs. <?php echo $ventam['total']; ?></td>
                     <td><?php echo $ventam['codCliente']; ?></td>
                     <td><?php echo $ventam['metodoPago']; ?></td>
                     <td><?php echo $ventam['codEmpleado']; ?></td>
                     <td>
-                        <a href="index.php?controller=ventam&action=edit&id=<?php echo $ventam['idVentaM']; ?>">Editar</a>
-                        <a href="index.php?controller=ventam&action=delete&id=<?php echo $ventam['idVentaM']; ?>" onclick="return confirm('¿Estás seguro de eliminar este ventam?');">Eliminar</a>    
+                        <a id="boton" href="enrutador.php?controller=ventam&action=edit&id=<?php echo $ventam['idVentaM']; ?>">Editar</a>
+                        <a id="boton" href="enrutador.php?controller=ventam&action=delete&id=<?php echo $ventam['idVentaM']; ?>" onclick="return confirm('¿Estás seguro de eliminar este ventam?');">Eliminar</a>    
                     </td>
                 </tr>
             <?php endforeach; ?>

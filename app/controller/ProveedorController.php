@@ -23,7 +23,7 @@ class ProveedorController {
             } else {
                 $this->modelo->agregar($nombre, $celular, $direccion);
             }
-            header('Location: index.php?controller=proveedor&action=index');
+            header('Location: enrutador.php?controller=proveedor&action=index');
         } else {
             require_once '../app/view/proveedor/create.php';
         }
@@ -37,7 +37,7 @@ class ProveedorController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=proveedor&action=index');
+            header('Location: enrutador.php?controller=proveedor&action=index');
         }
     }
 }

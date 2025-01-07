@@ -24,7 +24,7 @@ class VentamController {
             } else {
                 $this->modelo->agregar($fecha,$total,$codCliente,$metodoPago,$codEmpleado);
             }
-            header('Location: index.php?controller=ventam&action=index');
+            header('Location: enrutador.php?controller=ventam&action=index');
         } else {
             require_once '../app/view/ventam/create.php';
         }
@@ -38,7 +38,7 @@ class VentamController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=ventam&action=index');
+            header('Location: enrutador.php?controller=ventam&action=index');
         }
     }
 }

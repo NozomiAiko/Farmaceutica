@@ -30,16 +30,17 @@
             </nav>
     </div>
     <main>
-    <a href="index.php?controller=ventad&action=create">Añadir Detalle de Venta</a>
+    <a id="boton" href="enrutador.php?controller=ventad&action=create">Añadir Detalle de Venta</a>
     <h1>Ventas </h1>
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Codigo</th>
                 <th>Venta original</th>
                 <th>Medicamento</th>
-                <th>cantidad</th>
-                <th>precio</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -49,10 +50,10 @@
                     <td><?php echo $ventad['codVentaM']; ?></td>
                     <td><?php echo $ventad['codMedicamento']; ?></td>
                     <td><?php echo $ventad['cantidad']; ?></td>
-                    <td><?php echo $ventad['precio']; ?></td>
+                    <td>Bs. <?php echo $ventad['precio']; ?></td>
                     <td>
-                        <a href="index.php?controller=ventad&action=edit&id=<?php echo $ventad['idVentaD']; ?>">Editar</a>
-                        <a href="index.php?controller=ventad&action=delete&id=<?php echo $ventad['idVentaD']; ?>" onclick="return confirm('¿Estás seguro de eliminar este ventad?');">Eliminar</a>    
+                        <a id="boton" href="enrutador.php?controller=ventad&action=edit&id=<?php echo $ventad['idVentaD']; ?>">Editar</a>
+                        <a id="boton" href="enrutador.php?controller=ventad&action=delete&id=<?php echo $ventad['idVentaD']; ?>" onclick="return confirm('¿Estás seguro de eliminar este ventad?');">Eliminar</a>    
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -22,7 +22,7 @@ class MovimientoController {
             } else {
                 $this->modelo->ag($codMed,$operacion,$codInventario);
             }
-            header('Location: index.php?controller=movimiento&action=index');
+            header('Location: enrutador.php?controller=movimiento&action=index');
         } else {
             require_once '../app/view/movimiento/create.php';
         }
@@ -36,7 +36,7 @@ class MovimientoController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=movimiento&action=index');
+            header('Location: enrutador.php?controller=movimiento&action=index');
         }
     }
 }

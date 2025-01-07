@@ -30,15 +30,16 @@
             </nav>
     </div>
     <main>
-    <a href="index.php?controller=empleado&action=create">Añadir empleado</a>
-    <h1>Empleados</h1>
+    <a id="boton" href="enrutador.php?controller=empleado&action=create">Añadir empleado</a>
+    <h1>EMPLEADOS</h1>
     <table border="1">
         <thead>
             <tr>
-                <th>CODIGO</th>
+                <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Celular</th>  
                 <th>Turno</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -49,8 +50,8 @@
                     <td><?php echo $empleado['celularEmp']; ?></td>
                     <td><?php echo $empleado['turno']; ?></td>
                     <td>
-                        <a href="index.php?controller=empleado&action=edit&id=<?php echo $empleado['idEmpleado']; ?>">Editar</a>
-                        <a href="index.php?controller=empleado&action=delete&id=<?php echo $empleado['idEmpleado']; ?>" onclick="return confirm('¿Estás seguro de eliminar este empleado?');">Eliminar</a>    
+                        <a id="boton" href="enrutador.php?controller=empleado&action=edit&id=<?php echo $empleado['idEmpleado']; ?>">Editar</a>
+                        <a id="boton" href="enrutador.php?controller=empleado&action=delete&id=<?php echo $empleado['idEmpleado']; ?>" onclick="return confirm('¿Estás seguro de eliminar este empleado?');">Eliminar</a>    
                     </td>
                 </tr>
             <?php endforeach; ?>

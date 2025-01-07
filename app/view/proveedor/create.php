@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Registro de Proveedores</h1>
-    <form action="index.php?controller=proveedor&action=create" method="POST">
+    <form action="enrutador.php?controller=proveedor&action=create" method="POST">
         <input type="hidden" name="idProveedor" value="<?php echo $proveedor['idProveedor'] ?? ''; ?>">
         
         <label for="nombrePro">Empresa Proveedora:</label>
@@ -28,7 +28,7 @@
         </button>
     </form>
     <br>
-    <a href="index.php?controller=proveedor&action=index">Volver a la lista de proveedors</a>
+    <a href="enrutador.php?controller=proveedor&action=index">Volver a la lista de proveedors</a>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>
 </body>

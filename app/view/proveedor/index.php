@@ -30,15 +30,16 @@
             </nav>
     </div>
     <main>
-    <a href="index.php?controller=proveedor&action=create">Añadir Proveedor</a>
+    <a id="boton" ref="enrutador.php?controller=proveedor&action=create">Añadir Proveedor</a>
     <h1>Proveedores</h1>
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Codigo</th>
                 <th>Proveedor</th>
                 <th>Celular</th>
                 <th>Direccion</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -49,8 +50,8 @@
                     <td><?php echo $proveedor['celularPro']; ?></td>
                     <td><?php echo $proveedor['direccion']; ?></td>
                     <td>
-                        <a href="index.php?controller=proveedor&action=edit&id=<?php echo $proveedor['idProveedores']; ?>">Editar</a>
-                        <a href="index.php?controller=proveedor&action=delete&id=<?php echo $proveedor['idProveedores']; ?>" onclick="return confirm('¿Estás seguro de eliminar este proveedor?');">Eliminar</a>    
+                        <a id="boton" ref="enrutador.php?controller=proveedor&action=edit&id=<?php echo $proveedor['idProveedores']; ?>">Editar</a>
+                        <a id="boton" ref="enrutador.php?controller=proveedor&action=delete&id=<?php echo $proveedor['idProveedores']; ?>" onclick="return confirm('¿Estás seguro de eliminar este proveedor?');">Eliminar</a>    
                     </td>
                 </tr>
             <?php endforeach; ?>

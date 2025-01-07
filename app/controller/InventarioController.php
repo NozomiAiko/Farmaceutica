@@ -21,7 +21,7 @@ class InventarioController {
             } else {
                 $this->modelo->agregar($med, $cantidad);
             }
-            header('Location: index.php?controller=inventario&action=index');
+            header('Location: enrutador.php?controller=inventario&action=index');
         } else {
             require_once '../app/view/inventario/create.php';
         }
@@ -35,7 +35,7 @@ class InventarioController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=inventario&action=index');
+            header('Location: enrutador.php?controller=inventario&action=index');
         }
     }
     

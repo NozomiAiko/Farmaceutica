@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Registro de Movimientos</h1>
-    <form action="index.php?controller=movimiento&action=create" method="POST">
+    <form action="enrutador.php?controller=movimiento&action=create" method="POST">
         <input type="hidden" name="idMovimiento" value="<?php echo $movimiento['idMovimiento'] ?? ''; ?>">
         
         <label for="codMedicamento">MEDICAMENTO:</label>
@@ -28,7 +28,7 @@
         </button>
     </form>
     <br>
-    <a href="index.php?controller=movimiento&action=index">Volver a la lista de movimientos</a>
+    <a href="enrutador.php?controller=movimiento&action=index">Volver a la lista de movimientos</a>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>
 </body>

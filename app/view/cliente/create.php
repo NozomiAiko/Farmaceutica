@@ -7,10 +7,10 @@
     <title>Crear Cliente</title>
 </head>
 <body>
-    <h1>Registrar Cliente</h1>
-    <form action="index.php?controller=cliente&action=create" method="POST">          
-        <label for="idCliente">ID:</label>
-        <input type="number" name="idCliente" value="<?php echo $cliente['idCliente'] ?? ''; ?>">
+    <div class="formulario">
+    <form  action="enrutador.php?controller=cliente&action=create" method="POST">    
+    <h1>Registrar Cliente</h1>      
+        <input type="hidden" name="idCliente" value="<?php echo $cliente['idCliente'] ?? ''; ?>">
         <br><br>
         <label for="nombreCli">Nombre:</label>
         <input type="text" id="nombreCli" name="nombreCli" required value="<?php echo $cliente['nombreCli'] ?? ''; ?>">
@@ -24,8 +24,8 @@
             <?php echo isset($cliente) ? 'Actualizar Cliente' : 'Guardar Cliente'; ?>
         </button>
     </form>
-    <br>
-    <a href="index.php?controller=cliente&action=index">Volver a la lista de clientes</a>
+    </div>
+    <a id="boton" href="enrutador.php?controller=cliente&action=index">Volver a la lista de clientes</a>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>
 </body>

@@ -9,7 +9,7 @@
 <body>
     
     <h1>Registro de Detalles de Venta</h1>
-    <form action="index.php?controller=ventad&action=create" method="POST">
+    <form action="enrutador.php?controller=ventad&action=create" method="POST">
         <input type="hidden" name="idVentaD" value="<?php echo $ventad['idVentaD'] ?? ''; ?>">
         
         <label for="codVentaM">Venta Principal</label>
@@ -33,7 +33,7 @@
         </button>
     </form>
     <br>
-    <a href="index.php?controller=ventad&action=index">Volver a la lista de ventads</a>
+    <a href="enrutador.php?controller=ventad&action=index">Volver a la lista de ventads</a>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>
 </body>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Registro de Venta</h1>
-    <form action="index.php?controller=ventam&action=create" method="POST">
+    <form action="enrutador.php?controller=ventam&action=create" method="POST">
         <input type="hidden" name="idVentaM" value="<?php echo $ventam['idVentaM'] ?? ''; ?>">
         
         <label for="fecha">Fecha de venta:</label>
@@ -36,7 +36,7 @@
         </button>
     </form>
     <br>
-    <a href="index.php?controller=ventam&action=index">Volver a la lista de ventams</a>
+    <a href="enrutador.php?controller=ventam&action=index">Volver a la lista de ventams</a>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>
 </body>

@@ -22,7 +22,7 @@ class EmpleadoController {
             } else {
                 $this->modelo->agregar($nombre, $cel,$turno);
             }
-            header('Location: index.php?controller=empleado&action=index');
+            header('Location: enrutador.php?controller=empleado&action=index');
         } else {
             require_once '../app/view/empleado/create.php';
         }
@@ -36,7 +36,7 @@ class EmpleadoController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=empleado&action=index');
+            header('Location: enrutador.php?controller=empleado&action=index');
         }
     }
     

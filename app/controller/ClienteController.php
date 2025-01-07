@@ -21,7 +21,7 @@ class ClienteController {
             } else {
                 $this->modelo->agregar($nombre, $nit);
             }
-            header('Location: index.php?controller=cliente&action=index');
+            header('Location: enrutador.php?controller=cliente&action=index');
 
         } else {
             require_once '../app/view/cliente/create.php';
@@ -37,7 +37,7 @@ class ClienteController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=cliente&action=index');
+            header('Location: enrutador.php?controller=cliente&action=index');
         }
     }
 }

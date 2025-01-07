@@ -30,8 +30,9 @@
             </nav>
     </div>
     <main>
-    <a href="../app/view/cliente/index.php?controller=cliente&action=create">Añadir Cliente</a>
+    <a id="boton" href="enrutador.php?controller=cliente&action=create">Añadir Cliente</a>
     <h1>Clientes</h1>
+    <div class="con">
     <table border="1">
         <thead>
             <tr>
@@ -48,13 +49,14 @@
                     <td><?php echo $cliente['nombreCli']; ?></td>
                     <td><?php echo $cliente['nit']; ?></td>
                     <td>
-                        <a href="index.php?controller=cliente&action=edit&id=<?php echo $cliente['idCliente']; ?>">Editar</a>
-                        <a href="index.php?controller=cliente&action=delete&id=<?php echo $cliente['idCliente']; ?>" onclick="return confirm('¿Estás seguro de eliminar este cliente?');">Eliminar</a>    
+                        <a id="boton" href="enrutador.php?controller=cliente&action=edit&id=<?php echo $cliente['idCliente']; ?>">Editar</a>
+                        <a id="boton" href="enrutador.php?controller=cliente&action=delete&id=<?php echo $cliente['idCliente']; ?>" onclick="return confirm('¿Estás seguro de eliminar este cliente?');">Eliminar</a>    
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
     </main>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>

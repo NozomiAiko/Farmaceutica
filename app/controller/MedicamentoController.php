@@ -23,7 +23,7 @@ class MedicamentoController {
             } else {
                 $this->modelo->agregar($nombre, $pro,$detalle,$precio);
             }
-            header('Location: index.php?controller=medicamento&action=index');
+            header('Location: enrutador.php?controller=medicamento&action=index');
 
         } else {
             require_once '../app/view/medicamento/create.php';
@@ -39,7 +39,7 @@ class MedicamentoController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=medicamento&action=index');
+            header('Location: enrutador.php?controller=medicamento&action=index');
         }
     }
 }

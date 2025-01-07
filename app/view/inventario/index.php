@@ -32,12 +32,12 @@
     <main>
         
     
-    <a href="index.php?controller=inventario&action=create">Añadir Inventario</a>
+    <a id="boton" ref="enrutador.php?controller=inventario&action=create">Añadir Inventario</a>
     <h1>Inventarios</h1>
     <table border="1">
         <thead>
             <tr>
-                <th>id</th>
+                <th>Codigo</th>
                 <th>Medicamento</th>
                 <th>Cantidad</th>
                 <th>Opciones</th>  
@@ -50,8 +50,8 @@
                     <td><?php echo $inventario['codMedicamento']; ?></td>
                     <td><?php echo $inventario['cantidad']; ?></td>
                     <td>
-                        <a href="index.php?controller=inventario&action=edit&id=<?php echo $inventario['idInventario']; ?>">Editar</a>
-                        <a href="index.php?controller=inventario&action=delete&id=<?php echo $inventario['idInventario']; ?>" onclick="return confirm('¿Estás seguro de eliminar este inventario?');">Eliminar</a>    
+                        <a id="boton" ref="enrutador.php?controller=inventario&action=edit&id=<?php echo $inventario['idInventario']; ?>">Editar</a>
+                        <a id="boton" ref="enrutador.php?controller=inventario&action=delete&id=<?php echo $inventario['idInventario']; ?>" onclick="return confirm('¿Estás seguro de eliminar este inventario?');">Eliminar</a>    
             </td>
                 </tr>
             <?php endforeach; ?>

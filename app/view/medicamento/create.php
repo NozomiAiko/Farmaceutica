@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Registro de Medicamentos</h1>
-    <form action="index.php?controller=medicamento&action=create" method="POST">
+    <form action="enrutador.php?controller=medicamento&action=create" method="POST">
         <input type="hidden" name="idMedicamento" value="<?php echo $medicamento['idMedicamento'] ?? ''; ?>">
         
         <label for="nombreMed">MEDICAMENTO:</label>
@@ -31,7 +31,7 @@
         </button>
     </form>
     <br>
-    <a href="index.php?controller=medicamento&action=index">Volver a la lista de medicamentos</a>
+    <a href="enrutador.php?controller=medicamento&action=index">Volver a la lista de medicamentos</a>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../public/js/app.js"></script>
 </body>

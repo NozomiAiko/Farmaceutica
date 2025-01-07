@@ -23,7 +23,7 @@ class VentadController {
             } else {
                 $this->modelo->agregar($codVentaM, $codMed,$cantidad,$precio);
             }
-            header('Location: index.php?controller=ventad&action=index');
+            header('Location: enrutador.php?controller=ventad&action=index');
         } else {
             require_once '../app/view/ventad/create.php';
         }
@@ -37,7 +37,7 @@ class VentadController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
-            header('Location: index.php?controller=ventad&action=index');
+            header('Location: enrutador.php?controller=ventad&action=index');
         }
     }
 }
